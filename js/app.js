@@ -252,7 +252,7 @@ const App = {
         <div class="testimonial-card">
           <div class="testimonial-quote">${t.quote}</div>
           <div class="testimonial-footer">
-            <img src="${t.image}" alt="${t.author}" class="testimonial-avatar" />
+            <img src="${t.image}" alt="${t.author}" class="testimonial-avatar" referrerpolicy="no-referrer" loading="lazy" />
             <div class="testimonial-author">
               <div class="testimonial-author-name">${t.author}</div>
               <div class="testimonial-author-role">${t.role}</div>
