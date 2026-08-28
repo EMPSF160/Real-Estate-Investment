@@ -27,6 +27,7 @@ const App = {
     this.initBrokerSubmission();
     this.initContactMap();
     this.initMobileNav();
+    this.initScrollToTop();
 
     // Submodules initialization
     Router.init();
@@ -244,15 +245,18 @@ const App = {
       `).join('');
     }
 
-    // Render Testimonials
+    // Render Testimonials with Partner Portraits
     const testSlot = document.getElementById('home-testimonials-slot');
     if (testSlot) {
       testSlot.innerHTML = NY_DATA.testimonials.map(t => `
         <div class="testimonial-card">
           <div class="testimonial-quote">${t.quote}</div>
-          <div class="testimonial-author">
-            <div class="testimonial-author-name">${t.author}</div>
-            <div class="testimonial-author-role">${t.role}</div>
+          <div class="testimonial-footer">
+            <img src="${t.image}" alt="${t.author}" class="testimonial-avatar" />
+            <div class="testimonial-author">
+              <div class="testimonial-author-name">${t.author}</div>
+              <div class="testimonial-author-role">${t.role}</div>
+            </div>
           </div>
         </div>
       `).join('');
@@ -360,10 +364,10 @@ const App = {
         <div class="market-card-overlay">
           <div class="market-region-tag">${m.region}</div>
           <h3 class="market-city-name">${m.name}</h3>
-          <p style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 0.8rem; line-height: 1.4;">${m.desc}</p>
+          <p class="market-card-desc">${m.desc}</p>
           <div class="market-quick-stats">
-            <span>Cap: <strong style="color: var(--gold-light);">${m.capRate}</strong></span>
-            <span>Growth: <strong style="color: #fff;">${m.growth}</strong></span>
+            <span>Cap: <strong class="text-gold">${m.capRate}</strong></span>
+            <span>Growth: <strong class="text-white">${m.growth}</strong></span>
           </div>
         </div>
       </div>
@@ -584,6 +588,26 @@ const App = {
         nav.classList.remove('mobile-open');
         btn.setAttribute('aria-expanded', 'false');
       }
+    });
+  },
+
+  /* ------------------------------------------------------------------------
+     13. FLOATING SCROLL-TO-TOP / BOTTOM NAVIGATION CONTROLLER
+     ------------------------------------------------------------------------ */
+  initScrollToTop() {
+    const scrollBtn = document.getElementById('floating-scroll-btn');
+    if (!scrollBtn) return;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 250) {
+        scrollBtn.classList.add('visible');
+      } else {
+        scrollBtn.classList.remove('visible');
+      }
+    });
+
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 };

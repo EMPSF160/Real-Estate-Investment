@@ -45,9 +45,8 @@ const NY_DATA = {
 
   impactStats: [
     { value: 2.8, suffix: 'B+', prefix: '$', label: 'Assets Under Management' },
-    { value: 42, suffix: '+', prefix: '', label: 'Properties' },
+    { value: 42, suffix: '+', prefix: '', label: 'Properties Acquired' },
     { value: 18, suffix: '', prefix: '', label: 'Core & Growth Markets' },
-    { value: 12, suffix: '+', prefix: '', label: 'Years of Excellence' },
     { value: 18.4, suffix: '%', prefix: '', label: 'Historical Net IRR' }
   ],
 
@@ -85,17 +84,20 @@ const NY_DATA = {
     {
       quote: "NY Realty Investment Group has consistently outperformed our core-plus real estate benchmarks while maintaining a conservative debt profile and impeccable transparency.",
       author: "H.E. Tariq Al-Mansoor",
-      role: "Chief Investment Officer, Gulf Sovereign Endowment ($14B AUM)"
+      role: "Chief Investment Officer, Gulf Sovereign Endowment ($14B AUM)",
+      image: "image/Wvh_7lP7nvynWg0E24WTBWhB8_Ri8Q3vPMJK3QkwycUvP04Kfexmd3hDJrkq8hNq83yX24RFD4fMNCdQMaeKmyTG9K10hHNHbwv5znX505mBjZnr7k9QFMjnZndcUH3lZsp3k6y2bxpe0-JgYhJJIFEfRGa5xWHHvYOKmBqM9rpBsxco1v1cVrHe.jpg"
     },
     {
       quote: "Their boots-on-the-ground presence in Manhattan and Miami gives them off-market access that standard private equity firms simply cannot match. A true cornerstone partner.",
       author: "Alexander von Hapsburg",
-      role: "Managing Director, European Multi-Family Office"
+      role: "Managing Director, European Multi-Family Office",
+      image: "image/Xx5PyS1V-gbPQWZmrrLDOnnr0L9druRZgvNKeUYP_59CGsXRn3QdaR06LztKpm-PtVj2dbN4Kdw9q8ix_HkFUn0KBPu9WovZagGBpF6yJt6OjF_PyZ7pKTWZZsDNc5beDU5_XuQzWROpmuOo9ubfFxxjJKb8dcjgiJeduBQzDvm90sYmpEuHc-iC.jpg"
     },
     {
       quote: "The team's execution on value-add repositioning and ESG modernization has protected our principal through volatile rate cycles while paying consistent quarterly yields.",
       author: "Sarah Sterling-Cooper",
-      role: "Trustee, North American University Pension System"
+      role: "Trustee, North American University Pension System",
+      image: "image/_pE2IJFMAxlEvzspNblW-2kKj61hUjIQ28kY_RArEWpeQXGMKFNWC6BO6agbtmEzdnpcuZpgVC6foIw6nka56nC_l13QvS9cvUgJ3XerP3IZ-5th-NA2lWw9loYqJ4gaS2FzKo-Fm3s3cJi7BssVCHB02HU0coUmXWhkLXVOMkfYtDxfoKOSOJHv.jpg"
     }
   ],
 

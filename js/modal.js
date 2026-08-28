@@ -108,7 +108,7 @@ const ModalManager = {
         </div>
       </div>
 
-      <div style="display: flex; gap: 1rem; justify-content: flex-end; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem;">
+      <div class="modal-footer-actions">
         <button class="btn btn-outline" onclick="ModalManager.close()">Close</button>
         <button class="btn btn-primary" onclick="ModalManager.requestOM('${prop.name}')">Request Offering Memorandum (OM) ↗</button>
       </div>
@@ -143,7 +143,7 @@ const ModalManager = {
         ${article.content}
       </div>
 
-      <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem;">
+      <div class="modal-footer-actions">
         <button class="btn btn-outline" onclick="ModalManager.close()">Close Article</button>
         <button class="btn btn-primary" onclick="ModalManager.downloadResearchPDF('${article.title}')">Download Full PDF Report (14 Pages) ↗</button>
       </div>

@@ -34,12 +34,12 @@
       <!-- Main Navigation Menu (8 Pages + Mobile CTA & Socials) -->
       <nav class="main-nav" id="main-nav">
         <a href="#home" class="nav-link" id="nav-home">HOME</a>
+        <a href="#about" class="nav-link" id="nav-about">ABOUT US</a>
         <a href="#properties" class="nav-link" id="nav-properties">PROPERTIES</a>
         <a href="#strategy" class="nav-link" id="nav-strategy">INVESTMENT</a>
         <a href="#markets" class="nav-link" id="nav-markets">MARKETS</a>
         <a href="#portfolio" class="nav-link" id="nav-portfolio">PORTFOLIO</a>
         <a href="#insights" class="nav-link" id="nav-insights">INSIGHTS</a>
-        <a href="#about" class="nav-link" id="nav-about">ABOUT US</a>
         <a href="#contact" class="nav-link" id="nav-contact">CONTACT</a>
         
         <!-- Mobile & Tablet (<=1024px) Drawer Action -->
@@ -286,35 +286,54 @@
           <!-- Rendered dynamically -->
         </div>
 
-        <!-- NEW SECTION (PROPERTIES): Broker & Seller Off-Market Deal Submission Portal -->
+        <!-- SECTION (PROPERTIES): Broker & Seller Off-Market Deal Submission Portal -->
         <div class="broker-deal-box">
-          <div>
+          <div class="broker-deal-info">
             <div class="eyebrow">FOR BROKERS & SELLERS</div>
-            <h3 style="font-size: 1.8rem; color: #fff; margin-bottom: 0.8rem;">Submit an Off-Market Acquisition Opportunity</h3>
-            <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 1.5rem;">
+            <h2 class="broker-deal-title">Submit an Off-Market Acquisition Opportunity</h2>
+            <p class="broker-deal-desc">
               We provide unencumbered, all-cash closing capabilities with standard 14-day due diligence for Class A office, multi-family, or prime urban land between $50M and $500M.
             </p>
-            <div style="display: flex; gap: 2rem; font-family: var(--font-mono); font-size: 0.82rem; color: var(--gold-light);">
-              <span>⚡ 14-Day Due Diligence</span>
-              <span>💰 $50M - $500M Tranche</span>
-              <span>🔒 Strict Non-Disclosure</span>
+            <div class="deal-tags-row">
+              <div class="deal-pill">
+                <span class="deal-pill-icon">⚡</span>
+                <span class="deal-pill-text">14-Day Due Diligence</span>
+              </div>
+              <div class="deal-pill">
+                <span class="deal-pill-icon">💰</span>
+                <span class="deal-pill-text">$50M - $500M Tranche</span>
+              </div>
+              <div class="deal-pill">
+                <span class="deal-pill-icon">🔒</span>
+                <span class="deal-pill-text">Strict Non-Disclosure</span>
+              </div>
             </div>
           </div>
-          <form id="broker-submission-form" style="background: #080c10; padding: 1.8rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-            <div class="form-group" style="margin-bottom: 1rem;">
-              <label style="font-size: 0.75rem;">Asset Name & Location</label>
-              <input type="text" class="form-input" placeholder="e.g. Midtown Manhattan Office Tower" required />
-            </div>
-            <div class="form-group" style="margin-bottom: 1rem;">
-              <label style="font-size: 0.75rem;">Estimated Price / Guidance</label>
-              <input type="text" class="form-input" placeholder="e.g. $125,000,000" required />
-            </div>
-            <div class="form-group" style="margin-bottom: 1.25rem;">
-              <label style="font-size: 0.75rem;">Your Brokerage / Contact Email</label>
-              <input type="email" class="form-input" placeholder="broker@cbre.com" required />
-            </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT DEAL TO ACQUISITIONS ↗</button>
-          </form>
+
+          <div class="broker-form-wrapper">
+            <form id="broker-submission-form" class="broker-form-card">
+              <div class="broker-form-header">
+                <div class="broker-form-badge">ACQUISITIONS DESK</div>
+                <div class="broker-form-sub">Confidential Deal Intake</div>
+              </div>
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="broker-asset-name" style="font-size: 0.75rem;">Asset Name & Location *</label>
+                <input type="text" id="broker-asset-name" class="form-input" placeholder="e.g. Midtown Manhattan Office Tower" required />
+              </div>
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="broker-asset-price" style="font-size: 0.75rem;">Estimated Price / Guidance *</label>
+                <input type="text" id="broker-asset-price" class="form-input" placeholder="e.g. $125,000,000" required />
+              </div>
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <label for="broker-contact-email" style="font-size: 0.75rem;">Your Brokerage / Contact Email *</label>
+                <input type="email" id="broker-contact-email" class="form-input" placeholder="broker@cbre.com" required />
+              </div>
+              <button type="submit" class="btn btn-primary btn-broker-submit">
+                <span>SUBMIT DEAL TO ACQUISITIONS</span>
+                <span class="btn-arrow">↗</span>
+              </button>
+            </form>
+          </div>
         </div>
 
       </div>
@@ -539,27 +558,27 @@
         </div>
 
         <!-- NEW SECTION (MARKETS): Sunbelt vs. Gateway Migration Intelligence -->
-        <div style="margin-top: 5rem; background: var(--bg-surface); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: 3rem;">
+        <div class="migration-index-box">
           <div class="eyebrow">MACRO DEMOGRAPHIC STUDY</div>
-          <h3 style="font-size: 1.8rem; color: #fff; margin-bottom: 1rem;">Capital & Wealth Migration Index</h3>
-          <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.7; margin-bottom: 2rem;">
+          <h3 class="migration-index-title">Capital & Wealth Migration Index</h3>
+          <p class="migration-index-desc">
             Our research model tracks state-by-state high earner relocation, corporate relocations, and municipal tax differentials. By investing simultaneously in supply-constrained gateway centers (New York) and hyper-growth business-friendly hubs (Miami, Texas), we capture balanced defensive yield and aggressive capital appreciation.
           </p>
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-            <div style="background: #080c10; padding: 1.5rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-              <div style="font-family: var(--font-mono); font-size: 1.8rem; color: var(--gold-light); font-weight: 700;">+32.4%</div>
-              <div style="font-size: 0.85rem; color: #fff; font-weight: 600; margin: 0.3rem 0;">Miami Wealth Inflow</div>
-              <div style="font-size: 0.78rem; color: var(--text-muted);">Net increase in ultra-high-net-worth residents over past 36 months.</div>
+          <div class="migration-stats-grid">
+            <div class="migration-stat-card">
+              <div class="migration-stat-num text-gold">+32.4%</div>
+              <div class="migration-stat-title">Miami Wealth Inflow</div>
+              <div class="migration-stat-sub">Net increase in ultra-high-net-worth residents over past 36 months.</div>
             </div>
-            <div style="background: #080c10; padding: 1.5rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-              <div style="font-family: var(--font-mono); font-size: 1.8rem; color: #10b981; font-weight: 700;">$165/SF</div>
-              <div style="font-size: 0.85rem; color: #fff; font-weight: 600; margin: 0.3rem 0;">Manhattan Class A+ Peak</div>
-              <div style="font-size: 0.78rem; color: var(--text-muted);">Record leasing rents achieved in trophy Hudson Yards & Midtown office towers.</div>
+            <div class="migration-stat-card">
+              <div class="migration-stat-num text-emerald">$165/SF</div>
+              <div class="migration-stat-title">Manhattan Class A+ Peak</div>
+              <div class="migration-stat-sub">Record leasing rents achieved in trophy Hudson Yards & Midtown office towers.</div>
             </div>
-            <div style="background: #080c10; padding: 1.5rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-              <div style="font-family: var(--font-mono); font-size: 1.8rem; color: #fff; font-weight: 700;">0.0%</div>
-              <div style="font-size: 0.85rem; color: #fff; font-weight: 600; margin: 0.3rem 0;">Florida State Income Tax</div>
-              <div style="font-size: 0.78rem; color: var(--text-muted);">Driving continuous corporate headquarters migration from Northeast corridors.</div>
+            <div class="migration-stat-card">
+              <div class="migration-stat-num text-white">0.0%</div>
+              <div class="migration-stat-title">Florida State Income Tax</div>
+              <div class="migration-stat-sub">Driving continuous corporate headquarters migration from Northeast corridors.</div>
             </div>
           </div>
         </div>
@@ -608,34 +627,34 @@
           <h2 style="font-size: 2rem; color: #fff;">Realized Value Creation</h2>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-          <div class="glass-card" style="padding: 2rem;">
+        <div class="case-studies-grid">
+          <div class="case-study-card">
             <div class="badge badge-gold" style="margin-bottom: 1rem;">Realized Exit • 2023</div>
             <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: #fff;">The Avery Tower Conversion</h3>
-            <p style="font-size: 0.88rem; margin-bottom: 1.5rem;">Downtown Manhattan commercial-to-luxury multi-family repositioning yielding a 23.4% Net IRR.</p>
-            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.85rem;">
+            <p style="font-size: 0.88rem; margin-bottom: 1.5rem; color: #cbd5e1;">Downtown Manhattan commercial-to-luxury multi-family repositioning yielding a 23.4% Net IRR.</p>
+            <div class="case-study-metrics">
               <span>Invested: $42M</span>
-              <span style="color: var(--gold-light);">Realized: $108M (2.57x)</span>
+              <span class="text-gold">Realized: $108M (2.57x)</span>
             </div>
           </div>
 
-          <div class="glass-card" style="padding: 2rem;">
+          <div class="case-study-card">
             <div class="badge badge-gold" style="margin-bottom: 1rem;">Realized Exit • 2022</div>
             <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: #fff;">Brickell Gateway Financial</h3>
-            <p style="font-size: 0.88rem; margin-bottom: 1.5rem;">Acquired off-market Class B office, fully leased to hedge funds and exited to institutional buyer.</p>
-            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.85rem;">
+            <p style="font-size: 0.88rem; margin-bottom: 1.5rem; color: #cbd5e1;">Acquired off-market Class B office, fully leased to hedge funds and exited to institutional buyer.</p>
+            <div class="case-study-metrics">
               <span>Invested: $65M</span>
-              <span style="color: var(--gold-light);">Realized: $142M (2.18x)</span>
+              <span class="text-gold">Realized: $142M (2.18x)</span>
             </div>
           </div>
 
-          <div class="glass-card" style="padding: 2rem;">
+          <div class="case-study-card">
             <div class="badge badge-gold" style="margin-bottom: 1rem;">Active Milestone • 2024</div>
             <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: #fff;">Hudson Waterfront Hub</h3>
-            <p style="font-size: 0.88rem; margin-bottom: 1.5rem;">High-tech multi-story logistics campus with long-term Fortune 50 master lease.</p>
-            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.85rem;">
+            <p style="font-size: 0.88rem; margin-bottom: 1.5rem; color: #cbd5e1;">High-tech multi-story logistics campus with long-term Fortune 50 master lease.</p>
+            <div class="case-study-metrics">
               <span>Basis: $220M</span>
-              <span style="color: var(--gold-light);">Current Nav: $360M</span>
+              <span class="text-gold">Current Nav: $360M</span>
             </div>
           </div>
         </div>
@@ -690,15 +709,15 @@
         </div>
 
         <!-- NEW SECTION (INSIGHTS): Bespoke Underwriting & Research Mandates -->
-        <div style="margin-top: 5rem; background: linear-gradient(135deg, #111722 0%, #172130 100%); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: 3rem; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center;">
-          <div>
+        <div class="research-mandates-box">
+          <div class="research-mandates-info">
             <div class="eyebrow">INSTITUTIONAL RESEARCH DESK</div>
-            <h3 style="font-size: 1.8rem; color: #fff; margin-bottom: 0.8rem;">Commission Custom Market Intelligence</h3>
-            <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6;">
+            <h3 class="research-mandates-title">Commission Custom Market Intelligence</h3>
+            <p class="research-mandates-desc">
               Our quantitative research division prepares bespoke submarket feasibility analyses, debt maturity stress-tests, and micro-location underwriting for sovereign wealth funds, institutional mandates, and qualified family offices.
             </p>
           </div>
-          <div style="text-align: right;">
+          <div class="research-mandates-btn-wrap">
             <a href="#contact" class="btn btn-primary">REQUEST CUSTOM RESEARCH BRIEF ↗</a>
           </div>
         </div>
@@ -721,30 +740,30 @@
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3.5rem; align-items: center; margin-bottom: 5rem;">
-          <div>
-            <h3 style="font-size: 1.8rem; margin-bottom: 1.25rem; color: #fff;">A Fiduciary Commitment to Precision & Long-Term Alpha</h3>
-            <p style="margin-bottom: 1.25rem;">
+        <div class="about-hero-grid">
+          <div class="about-hero-text">
+            <h3 class="about-hero-title">A Fiduciary Commitment to Precision & Long-Term Alpha</h3>
+            <p class="about-hero-desc">
               We operate at the nexus of institutional rigor and entrepreneurial agility. Our investment committee brings together veteran leadership from world-renowned private equity funds, sovereign wealth advisors, and premier architectural developers.
             </p>
-            <p style="margin-bottom: 1.75rem;">
+            <p class="about-hero-desc">
               With substantial principal co-investment across every single vehicle we manage, our financial incentives are perfectly aligned with our Limited Partners.
             </p>
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem;">
-              <div>
-                <div style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; color: var(--gold-light);">$450M+</div>
-                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Principal Co-Invested</div>
+            <div class="about-stats-row">
+              <div class="about-stat-item">
+                <div class="about-stat-val text-gold">$450M+</div>
+                <div class="about-stat-lbl">Principal Co-Invested</div>
               </div>
-              <div>
-                <div style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; color: #fff;">100%</div>
-                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Fiduciary Alignment</div>
+              <div class="about-stat-item">
+                <div class="about-stat-val text-white">100%</div>
+                <div class="about-stat-lbl">Fiduciary Alignment</div>
               </div>
             </div>
           </div>
 
-          <div style="position: relative; height: 380px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-gold);">
-            <img src="assets/images/featured-tower.jpg" alt="NY Realty Corporate Office" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="about-hero-media">
+            <img src="assets/images/featured-tower.jpg" alt="NY Realty Corporate Office" />
           </div>
         </div>
 
@@ -1011,6 +1030,7 @@
           <div class="footer-col-title">Navigation</div>
           <ul class="footer-links">
             <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
             <li><a href="#properties">Properties</a></li>
             <li><a href="#strategy">Investment Strategy</a></li>
             <li><a href="#markets">Markets</a></li>
@@ -1021,7 +1041,6 @@
         <div>
           <div class="footer-col-title">Company</div>
           <ul class="footer-links">
-            <li><a href="#about">About Us</a></li>
             <li><a href="#insights">Market Insights</a></li>
             <li><a href="#contact">Investor Relations</a></li>
             <li><a href="#login" class="btn-investor-login-trigger">LP Portal Login</a></li>
@@ -1032,8 +1051,10 @@
           <div class="footer-col-title">Quarterly Briefing</div>
           <p>Receive confidential institutional research and off-market deal pipeline updates.</p>
           <form class="newsletter-form">
-            <input type="email" placeholder="Enter work email" required />
-            <button type="submit" class="btn btn-primary" style="padding: 0.65rem 1rem;">→</button>
+            <input type="email" placeholder="Enter work email" required aria-label="Work Email" />
+            <button type="submit" class="btn btn-primary footer-newsletter-btn" aria-label="Submit Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
           </form>
         </div>
 
@@ -1096,14 +1117,17 @@
               <input type="password" id="lp-pass" class="form-input" value="••••••••••••" required />
             </div>
 
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.75rem; font-size: 0.82rem;">
-              <label style="color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+            <div class="lp-login-meta-row">
+              <label class="lp-remember-label">
                 <input type="checkbox" checked /> Remember session
               </label>
-              <a href="#contact" style="color: var(--gold-light);">Request Access / Reset Key</a>
+              <a href="#contact" class="lp-reset-link">Request Access / Reset Key</a>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%;">AUTHENTICATE & ENTER PORTAL ↗</button>
+            <button type="submit" class="btn btn-primary btn-lp-login">
+              <span>AUTHENTICATE & ENTER PORTAL</span>
+              <span class="btn-arrow">↗</span>
+            </button>
           </form>
         </div>
 
@@ -1153,6 +1177,11 @@
 
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toast-container"></div>
+
+  <!-- Floating Back to Top Button (Visible across all sections) -->
+  <button class="floating-scroll-btn" id="floating-scroll-btn" title="Back to Top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
 
   <!-- Scripts -->
   <script src="js/data.js"></script>
