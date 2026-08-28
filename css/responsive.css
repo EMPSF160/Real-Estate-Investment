@@ -1,0 +1,697 @@
+/* ==========================================================================
+   NY REALTY INVESTMENT GROUP - COMPLETE RESPONSIVE BREAKPOINT SYSTEM
+   Breakpoints: 1200px, 1024px, 900px, 834px, 768px, 576px, 425px, 375px, 320px
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DESKTOP & LARGE WIDESCREEN (min-width: 1025px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1320px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .mobile-menu-btn {
+    display: none !important;
+  }
+
+  .btn-investor-login {
+    display: inline-flex !important;
+  }
+
+  .mobile-drawer-cta {
+    display: none !important;
+  }
+
+  .main-nav {
+    display: flex !important;
+    position: static !important;
+    transform: none !important;
+    background: transparent !important;
+    flex-direction: row !important;
+    padding: 0 !important;
+    border: none !important;
+    overflow: visible !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. MOBILE, TABLET & 1024PX VIEW (max-width: 1024px)
+      STRICT REQUIREMENT: Visible Navbar = LOGO (Left) + HAMBURGER (Right) ONLY
+      Hide all other top bar elements (Login button, desktop nav, CTAs, icons).
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 76px;
+  }
+
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Compact Brand Logo */
+  .brand-logo {
+    max-width: 220px;
+  }
+
+  .logo-main {
+    font-size: 1.2rem;
+  }
+
+  .logo-sub {
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+  }
+
+  /* Top Bar Actions: Hide desktop login button */
+  .btn-investor-login {
+    display: none !important;
+  }
+
+  /* Hamburger Menu: Always visible on right */
+  .mobile-menu-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+
+  /* Full Screen / Drawer Navigation Panel */
+  .main-nav {
+    position: fixed !important;
+    top: var(--header-height) !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: calc(100vh - var(--header-height)) !important;
+    background: rgba(7, 9, 12, 0.98) !important;
+    backdrop-filter: blur(24px) !important;
+    -webkit-backdrop-filter: blur(24px) !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 2rem 1.75rem 3rem 1.75rem !important;
+    gap: 0.75rem !important;
+    transform: translateX(100%) !important;
+    visibility: hidden !important;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s ease !important;
+    z-index: 9999 !important;
+    border-top: 1px solid var(--border-gold) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .main-nav.mobile-open {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+  }
+
+  .nav-link {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    width: 100% !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+    padding: 0.75rem 0.5rem !important;
+    color: #f1f5f9 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .nav-link::after {
+    display: none !important;
+  }
+
+  .nav-link:hover, .nav-link.active {
+    color: var(--gold-light) !important;
+    background: rgba(197, 160, 89, 0.08) !important;
+    border-radius: var(--radius-sm) !important;
+  }
+
+  .mobile-drawer-cta {
+    display: block !important;
+    margin-top: 1rem !important;
+    padding-top: 1.25rem !important;
+  }
+
+  /* Hero Section */
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-indicators {
+    display: none;
+  }
+
+  .hero-text-block {
+    max-width: 100%;
+  }
+
+  /* 4-Column Grids -> 2-Column Balanced Layouts */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  .strategy-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .markets-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .leadership-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .capital-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .portfolio-kpi-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* 3-Column Grids -> 2-Column Grids */
+  .deal-pipeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .deal-pipeline-grid .pipeline-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .testimonials-grid .testimonial-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .insights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .insights-grid .insight-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .esg-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .esg-cards-grid .esg-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  /* Dual Spotlight Grid */
+  .dual-spotlight-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* Calculator Layout */
+  .calculator-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* Broker Deal Box */
+  .broker-deal-box {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Contact Form & Office Locations Centering (<=1024px) */
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .contact-layout-grid h3 {
+    text-align: center;
+  }
+
+  .form-box {
+    text-align: center;
+    width: 100%;
+  }
+
+  .form-box h3,
+  .form-box p {
+    text-align: center;
+  }
+
+  .form-group label {
+    text-align: left;
+  }
+
+  .offices-list {
+    align-items: center;
+    width: 100%;
+  }
+
+  .office-card {
+    text-align: center;
+    width: 100%;
+  }
+
+  .office-city,
+  .office-address,
+  .office-contact {
+    text-align: center;
+  }
+
+  .social-icons-group {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Footer Layout */
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. TABLET VIEW (max-width: 900px & 834px & 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .trust-logos-row {
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .properties-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .slots-picker-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .page-view {
+    padding-top: calc(var(--header-height) + 1.25rem);
+  }
+
+  section.page-section {
+    padding: 3rem 0;
+  }
+
+  /* Center Section Headers on Mobile */
+  .section-header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-header .eyebrow {
+    justify-content: center;
+  }
+
+  .section-header .eyebrow::before {
+    display: none;
+  }
+
+  .section-desc {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .hero-section {
+    min-height: 75vh;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  /* Split grids into clean 1-column layouts */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .stat-card {
+    padding-left: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .featured-property-block {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-prop-info {
+    padding: 1.5rem;
+  }
+
+  .strategy-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .capital-stack-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .markets-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .market-card {
+    aspect-ratio: 3 / 4;
+    min-height: 280px;
+    height: auto;
+  }
+
+  .deal-pipeline-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .deal-pipeline-grid .pipeline-card:last-child {
+    grid-column: auto;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .testimonials-grid .testimonial-card:last-child {
+    grid-column: auto;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .insights-grid .insight-card:last-child {
+    grid-column: auto;
+  }
+
+  .leadership-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .esg-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .esg-cards-grid .esg-card:last-child {
+    grid-column: auto;
+  }
+
+  .portfolio-kpi-bar {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  /* Form Responsive Stacking */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-box {
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-box h3,
+  .form-box p {
+    text-align: center;
+  }
+
+  .form-box .form-group label {
+    text-align: left;
+  }
+
+  .broker-deal-box {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .calculator-box {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .calc-results-panel {
+    padding: 1.5rem;
+  }
+
+  .briefing-scheduler-box {
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+  }
+
+  .briefing-scheduler-box .eyebrow {
+    justify-content: center;
+  }
+
+  .briefing-scheduler-box .eyebrow::before {
+    display: none;
+  }
+
+  .briefing-scheduler-box h3,
+  .briefing-scheduler-box p {
+    text-align: center;
+  }
+
+  .briefing-scheduler-box > div {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .briefing-input-group {
+    flex-direction: column !important;
+    gap: 0.85rem !important;
+    width: 100% !important;
+  }
+
+  .briefing-input-group .form-input,
+  .briefing-input-group .btn {
+    width: 100% !important;
+    white-space: normal !important;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .modal-window {
+    max-height: 94vh;
+    border-radius: var(--radius-md);
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. MOBILE VIEW (max-width: 576px, 425px, 375px, 320px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .properties-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .filter-bar-wrapper {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .filter-group {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    padding-bottom: 0.35rem;
+  }
+
+  .filter-search-box {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .prop-card-media {
+    aspect-ratio: 16 / 10;
+    height: auto;
+  }
+
+  .prop-card-body {
+    padding: 1.25rem;
+  }
+
+  .prop-card-metrics {
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 0.8rem;
+  }
+
+  .slots-picker-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    max-width: none;
+  }
+
+  .toast {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn-link {
+    width: auto;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form .btn {
+    width: 100%;
+  }
+}
+
+/* Small mobile devices (320px - 375px) */
+@media (max-width: 375px) {
+  :root {
+    --header-height: 66px;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .brand-logo {
+    max-width: 160px;
+    flex-shrink: 0;
+  }
+
+  .logo-main {
+    font-size: 1.05rem;
+  }
+
+  .logo-sub {
+    font-size: 0.5rem;
+    letter-spacing: 0.12em;
+  }
+
+  .mobile-menu-btn {
+    display: flex !important;
+    width: 38px;
+    height: 38px;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .hamburger-bar {
+    width: 18px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+  }
+
+  .stat-number {
+    font-size: 1.85rem;
+  }
+
+  .calc-highlight-num {
+    font-size: 2.2rem;
+  }
+
+  .prop-card-metrics {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .prop-metric-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
